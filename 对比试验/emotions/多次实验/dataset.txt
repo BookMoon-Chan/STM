@@ -1,0 +1,15 @@
+parser = argparse.ArgumentParser(description='Active Learning')
+parser.add_argument('--label_num', type=int, default=5)
+parser.add_argument('--strategy', type=str, default='Adaptive')
+parser.add_argument('--max_iteration', type=int, default=80)
+parser.add_argument('--dataset', type=str, default='emotions')
+parser.add_argument('--training_rate', type=float, default=0.9)
+parser.add_argument('--testing_rate', type=float, default=0.1)
+parser.add_argument('--core', type=int, default=1)
+parser.add_argument('--preprocess', type=bool, default=True)
+parser.add_argument('--full_label', type=bool, default=True)
+parser.add_argument('--init_label_rate', type=int, default=0.05)
+parser.add_argument('--saving_path', type=str)
+parser.add_argument('--evl_metrics', type=list, default=['hamming_loss', 'f_beta', 'coverage', 'ranking_loss',
+                                                         'average_precision', 'macro_averaging', 'micro_averaging',
+                                                         'one_error'])
